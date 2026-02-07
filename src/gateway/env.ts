@@ -22,6 +22,7 @@ export function buildEnvVars(env: MoltbotEnv): Record<string, string> {
 
   // Direct provider keys
   if (env.ANTHROPIC_API_KEY) envVars.ANTHROPIC_API_KEY = env.ANTHROPIC_API_KEY;
+  if (env.ANTHROPIC_MODEL) envVars.ANTHROPIC_MODEL = env.ANTHROPIC_MODEL;
   if (env.OPENAI_API_KEY) envVars.OPENAI_API_KEY = env.OPENAI_API_KEY;
 
   // Legacy AI Gateway support: AI_GATEWAY_BASE_URL + AI_GATEWAY_API_KEY
@@ -49,6 +50,7 @@ export function buildEnvVars(env: MoltbotEnv): Record<string, string> {
   if (env.CF_ACCOUNT_ID) envVars.CF_ACCOUNT_ID = env.CF_ACCOUNT_ID;
   if (env.CDP_SECRET) envVars.CDP_SECRET = env.CDP_SECRET;
   if (env.WORKER_URL) envVars.WORKER_URL = env.WORKER_URL;
+  if (env.API_TIMEOUT_MS) envVars.API_TIMEOUT_MS = env.API_TIMEOUT_MS;
 
   return envVars;
 }
